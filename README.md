@@ -11,6 +11,7 @@ HOWTO USE
 PATCH
 =======
 Replace the code in file:
+
     node_modules/connect/lib/middleware/directory.js
 
 with:
