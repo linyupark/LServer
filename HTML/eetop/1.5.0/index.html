@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>parsley form validation demo</title>
+  </head>
+  <body>
+    <form id="demo-form" data-validate="parsley">
+        <label for="fullname">Full Name * :</label>
+        <input type="text" id="fullname" name="fullname" data-required="true" />
+
+        <label for="email">Email * :</label>
+        <input type="text" id="email" name="email" data-trigger="change" data-required="true" data-type="email" />
+
+        <label for="website">Website :</label>
+        <input type="text" id="website" name="website" data-trigger="change" data-type="url" />
+
+        <label for="message">Message (20 chars min, 200 max) :</label>
+        <textarea id="message" name="message" data-trigger="keyup" data-rangelength="[20,200]"></textarea>
+        <button id="demo-form-valid">ok</button>
+    </form>
+    <script id="requirejs" 
+            src="<%= _static %>/js/src/lib/require/2.1.6.js" 
+            data-env="test" data-main="<%= _static %>/js/src/bootstrap" 
+            data-mod="main"></script>
+  </body>
+</html>
